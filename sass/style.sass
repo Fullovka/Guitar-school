@@ -1,0 +1,1421 @@
+@import "normalizes.scss"
+@import "resets.scss"
+
+$color-blue: #5290EA
+$color-orange: #F28B64
+$color-grey: #E2E2E2
+
+*
+    -webkit-box-sizing: border-box
+            box-sizing: border-box
+
+html, body
+    font-family: 'montserrat'
+    font-weight: 400
+
+.container
+    max-width: 1140px
+    margin: 0 auto
+
+.main-section
+    position: relative
+    overflow: hidden
+    padding: 16px 0px 0px 0px
+    min-height: 794px
+    background-color: #F0F0F0
+    &__nav-container
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-orient: horizontal
+        -webkit-box-direction: normal
+        -ms-flex-direction: row
+        flex-direction: row
+        -webkit-box-pack: justify
+        -ms-flex-pack: justify
+        justify-content: space-between
+        height: 69px
+        -webkit-box-align: center
+        -ms-flex-align: center
+        align-items: center
+    &__logo
+        width: 134px
+    &__content-container
+        position: relative
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-orient: horizontal
+        -webkit-box-direction: normal
+        -ms-flex-direction: row
+        flex-direction: row
+    &__first-elipse
+        position: absolute
+        top: 130px
+        right: 30px
+        transform: rotate(265deg)
+    &__second-elipse
+        position: absolute
+        top: 650px
+        right: -120px
+
+// навигационное меню
+.nav-menu
+    &__list
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-orient: horizontal
+        -webkit-box-direction: normal
+        -ms-flex-direction: row
+        flex-direction: row
+    &__list-item
+        margin: 0px 66px 0px 0px
+        font-size: 18px
+        font-weight: 600
+        &:last-child
+            margin: 0px 0px 0px 0px
+    &__list-a
+        display: inline-block
+        text-decoration: none
+        line-height: 1 // задаём высоту строки
+        color: #000000
+        &::after  
+            display: block
+            content: ""
+            height: 2px // высота линии
+            width: 0% // начальная ширина элемента
+            background-color: #000000
+            transition: width 0.4s ease-in-out // плавное изменение ширины
+        &:hover::after,
+        a:focus:after 
+            width: 100%
+
+.left-wrapper
+    position: relative
+    &__img
+        position: relative
+        z-index: 10
+    &__rectangle-blue
+        position: absolute
+        top: 150px
+        left: -50px
+        width: 565.95px
+        height: 220px
+        background: $color-blue
+        -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 100px
+        -webkit-transform: rotate(-64deg)
+        -ms-transform: rotate(-64deg)
+        transform: rotate(-64deg)
+        z-index: 8
+    &__rectangle-orange
+        position: absolute
+        top: 160px
+        left: -30px
+        width: 618.43px
+        height: 220px
+        background: $color-orange
+        -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 100px
+        -webkit-transform: rotate(-50.81deg)
+        -ms-transform: rotate(-50.81deg)
+        transform: rotate(-50.81deg)
+        z-index: 9
+    &__rectangle-grey
+        position: absolute
+        top: 190px
+        left: 10px
+        width: 608.97px
+        height: 220px
+        background: $color-grey
+        -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 100px
+        -webkit-transform: rotate(-36.15deg)
+        -ms-transform: rotate(-36.15deg)
+        transform: rotate(-36.15deg)
+        z-index: 7
+
+.right-wrapper
+    position: absolute
+    top: 150px
+    right: 76px
+    width: 401px
+    z-index: 11 // Чтобы левая часть не перекрывала правую
+    &__icons-box    
+        margin: 0px 0px 4px 0px
+        padding: 0px 0px 0px 6px
+    &__title
+        margin: 0px 0px 5px 0px
+    &__text
+        margin: 0px 0px 20px 0px
+        font-size: 16px
+        line-height: 1.4
+
+.icons
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: horizontal
+    -webkit-box-direction: normal
+    -ms-flex-direction: row
+    flex-direction: row
+    &__item
+        margin: 0px 17px 0px 0px
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-pack: center
+        -ms-flex-pack: center
+        justify-content: center
+        -webkit-box-align: center
+        -ms-flex-align: center
+        align-items: center
+        width: 40px
+        height: 40px
+        border-radius: 100px
+        border: 1px solid $color-blue
+        &:last-child
+            margin: 0px 0px 0px 0px
+        i
+            font-size: 21px
+            color: #000000
+            &:hover
+                font-size: 26px
+                
+.title
+    position: relative
+    font-size: 72px
+    font-weight: 600
+    &__hr   
+        position: absolute
+        margin: 0px
+        width: 65px
+        bottom: 0px
+        border: none
+        // border-top: 1px solid #000000
+
+.buttons
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: horizontal
+    -webkit-box-direction: normal
+    -ms-flex-direction: row
+    flex-direction: row
+    &__main-button
+        margin: 0px 32px 0px 0px
+        width: 200px
+        height: 60px
+        background: $color-orange
+        -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 100px
+        font-size: 18px
+        font-weight: 600
+        color: #FFFFFF
+        -webkit-transition: all .6s ease
+        -o-transition: all .6s ease
+        transition: all .6s ease
+        &:hover
+            background: #FFFFFF
+            color: $color-orange
+    &__icon-button
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-orient: horizontal
+        -webkit-box-direction: normal
+        -ms-flex-direction: row
+        flex-direction: row
+        -webkit-box-align: center
+        -ms-flex-align: center
+        align-items: center
+        img
+            margin: 0px 12px 0px 0px
+            cursor: pointer
+            &:hover
+                height: 50px
+                width: 50px
+    &__text
+        font-size: 16px
+
+.elipse
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    width: 194px
+    height: 194px
+    background: -o-linear-gradient(306.08deg, #ED7B50 14.85%, #488AEA 53.25%, #2C2C2C 85.74%)
+    background: linear-gradient(143.92deg, #ED7B50 14.85%, #488AEA 53.25%, #2C2C2C 85.74%)
+    border-radius: 200px
+    &_big
+        width: 282px
+        height: 282px
+        -webkit-transform: rotate(45deg)
+        -ms-transform: rotate(45deg)
+        transform: rotate(45deg)
+    &__subtract
+        width: 129.33px
+        height: 129.33px
+        background: #F0F0F0
+        border-radius: 200px
+        &_big
+            width: 188px
+            height: 188px
+            background: #F0F0F0
+    &__subtract-white
+        width: 129.33px
+        height: 129.33px
+        background: #FFFFFF 
+        border-radius: 200px
+
+.second-section
+    overflow: hidden
+    min-height: 680px
+    &__container
+        position: relative
+        padding: 32px 0px 0px 0px
+    &__title
+        margin: 0px 0px 40px 0px
+    &__cards-box
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-orient: horizontal
+        -webkit-box-direction: normal
+        -ms-flex-direction: row
+        flex-direction: row
+        -webkit-box-pack: center
+        -ms-flex-pack: center
+        justify-content: center
+        margin: 0px 0px 25px 0px
+    &__cards-item
+        margin: 0px 30px 0px 0px
+        &:last-child
+            margin: 0px
+    &__icons-box
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-pack: space-evenly
+        -ms-flex-pack: space-evenly
+        justify-content: space-evenly
+    &__first-elipse
+        position: absolute
+        top: 70px
+        right: -80px
+        z-index: -1
+    &__second-elipse
+        position: absolute
+        top: 390px
+        left: -75px
+        z-index: -1
+        transform: rotate(225deg)
+
+.cards-item
+    position: relative
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-align: end
+    -ms-flex-align: end
+    align-items: flex-end
+    width: 360px
+    height: 360px
+    background: $color-grey
+    border-radius: 10px
+    &__text
+        position: absolute
+        top: 144px
+        right: -45px
+        width: 280px
+        font-size: 36px
+        text-align: center
+        -webkit-transform: rotate(90deg)
+        -ms-transform: rotate(90deg)
+        transform: rotate(90deg)
+        font-weight: 600
+
+.cards-item_orange
+    background: $color-orange
+
+.cards-item_blue
+    background: $color-blue
+
+.icons-item
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: horizontal
+    -webkit-box-direction: normal
+    -ms-flex-direction: row
+    flex-direction: row
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    &__img
+        margin: 0px 20px 0px 0px
+    &__text
+        font-size: 18px
+        span
+            font-size: 48px
+            font-weight: 600
+
+.third-section
+    position: relative
+    min-height: 673px
+    background: #F0F0F0
+    overflow: hidden
+    z-index: 0
+    &__container
+        padding: 46px 0px 0px 0px
+        position: relative
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-orient: horizontal
+        -webkit-box-direction: normal
+        -ms-flex-direction: row
+        flex-direction: row
+        -webkit-box-align: center
+        -ms-flex-align: center
+        align-items: center
+        -webkit-box-pack: justify
+        -ms-flex-pack: justify
+        justify-content: space-between
+    &__certificate
+        position: absolute
+        top: 90px
+        left: 0px
+        display: block
+    &__right-wrapper
+        max-width: 480px
+    &__right-title
+        margin: 0px 0px 20px 0px
+    &__text
+        margin: 0px 0px 30px 0px
+        font-size: 18px
+        line-height: 1.4
+    &__first-elipse
+        position: absolute
+        top: 140px
+        left: 110px
+        z-index: -1
+        display: none
+    &__figure
+        position: absolute
+        top: 249px
+        left: 15px
+        z-index: -1
+        display: none
+    &__second-elipse
+        position: absolute
+        bottom: -155px
+        left: -135px
+        transform: rotate(110deg)
+
+.title__hr-top
+    bottom: 75px
+
+.footer
+    &__container
+        position: relative
+        min-height: 272px
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-pack: end
+        -ms-flex-pack: end
+        justify-content: flex-end
+        -webkit-box-align: center
+        -ms-flex-align: center
+        align-items: center
+    &__img
+        position: absolute
+        left: -250px
+        bottom: 0px
+    &__title
+        margin: 0px 0px 20px 0px
+
+// Стилизация модального окна и прочих его компонентов
+.modal
+    display: none
+    position: fixed
+    z-index: 999
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 100%
+    overflow: auto
+    background-color: rgb(0, 0, 0)
+    background-color: rgba(0, 0, 0, 0.5)
+
+.modal-content
+    background-color: #fefefe
+    margin: 15% auto
+    padding: 0px
+    border: 1px solid #888888
+    max-width: 40em
+    border-radius: 16px
+
+.modal-header
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    border-bottom: 1px solid #888888
+    padding: 20px 16px
+    font-size: 22px
+
+.modal-title
+    font-size: 22px
+
+.closeButton
+    cursor: pointer 
+
+.modal-body
+    display: flex
+    flex-direction: column
+    border-bottom: 1px solid #888888
+    padding: 22px 16px
+
+.input-email
+    font-size: 16px
+    margin: 0px 0px 8px 0px
+
+.email
+    border: 1px solid grey
+    border-radius: 8px
+    padding: 6px
+    margin: 0px 0px 10px 0px
+    width: 280px
+
+.input-age
+    font-size: 16px
+    margin: 0px 0px 8px 0px
+
+.age
+    border: 1px solid grey
+    border-radius: 8px
+    padding: 6px
+    width: 160px
+
+.modal-footer
+    padding: 20px 16px
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+
+.button-close
+    margin: 0px 16px 0px 0px
+    width: 100px
+    height: 38px
+    background: grey
+    border-radius: 12px
+    cursor: pointer
+    font-size: 16px
+    color: #FFFFFF
+
+.button-send
+    width: 100px
+    height: 38px
+    background: dodgerblue
+    cursor: pointer
+    border-radius: 12px
+    font-size: 16px
+    color: #FFFFFF
+
+// Маленький ПК или горизонтальный планшет
+@media (max-width: 1199px)
+    .container 
+        width: 960px
+    .main-section
+        position: relative
+        overflow: hidden
+        padding: 16px 0px 0px 0px
+        min-height: 687px
+        background-color: #F0F0F0
+        &__nav-container
+            display: -webkit-box
+            display: -ms-flexbox
+            display: flex
+            -webkit-box-orient: horizontal
+            -webkit-box-direction: normal
+            -ms-flex-direction: row
+            flex-direction: row
+            -webkit-box-pack: justify
+            -ms-flex-pack: justify
+            justify-content: space-between
+            height: 69px
+            -webkit-box-align: center
+            -ms-flex-align: center
+            align-items: center
+        &__logo
+            width: 134px
+        &__content-container
+            position: relative
+            display: -webkit-box
+            display: -ms-flexbox
+            display: flex
+            -webkit-box-orient: horizontal
+            -webkit-box-direction: normal
+            -ms-flex-direction: row
+            flex-direction: row
+        &__first-elipse
+            display: none
+            position: absolute
+            top: 130px
+            right: 30px
+            transform: rotate(265deg)
+        &__second-elipse
+            display: none
+            position: absolute
+            top: 650px
+            right: -120px
+
+    .left-wrapper
+        &__img
+            width: 750px
+        &__rectangle-blue
+            width: 500px
+            height: 200px
+        &__rectangle-orange
+            width: 525px
+            height: 200px
+        &__rectangle-grey
+            width: 510px
+            height: 200px
+
+    .right-wrapper
+        position: absolute
+        top: 80px
+        right: 12px
+        width: 400px
+        z-index: 11
+        &__icons-box    
+            margin: 0px 0px 4px 0px
+            padding: 0px 0px 0px 6px
+        &__title
+            margin: 0px 0px 5px 0px
+            font-size: 62px
+        &__text
+            margin: 0px 0px 14px 0px
+            font-size: 16px
+            line-height: 1.4
+
+    .second-section
+        overflow: hidden
+        min-height: 584px
+        &__container
+            position: relative
+            padding: 32px 0px 0px 0px
+        &__title
+            margin: 0px 0px 40px 0px
+            font-size: 62px
+        &__cards-box
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            margin: 0px 0px 25px 0px
+        &__cards-item
+            margin: 0px 30px 0px 0px
+            &:last-child
+                margin: 0px
+        &__icons-box
+            display: -webkit-box
+            display: -ms-flexbox
+            display: flex
+            -webkit-box-pack: space-evenly
+            -ms-flex-pack: space-evenly
+            justify-content: space-evenly
+        &__first-elipse
+            position: absolute
+            top: -92px
+            right: -130px
+            z-index: -1
+            transform: rotate(342deg)
+        &__second-elipse
+            position: absolute
+            top: 504px
+            left: -114px
+            z-index: -1
+            transform: rotate(116deg)
+
+    .cards-item
+        margin: 0px 20px 0px 0px
+        width: 300px
+        height: 300px
+        &__img
+            height: 270px
+        &__text
+            top: 120px
+            font-size: 30px
+
+    .third-section
+        position: relative
+        min-height: 606px
+        background: #F0F0F0
+        overflow: hidden
+        z-index: 0
+        &__container
+            padding: 32px 0px
+            position: relative
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+        &__certificate
+            display: block
+            position: absolute
+            top: 90px
+            left: 0px
+            width: 32em
+        &__right-wrapper
+            max-width: 480px
+        &__right-title
+            margin: 0px 0px 16px 0px
+            font-size: 62px
+        &__text
+            margin: 0px 0px 14px 0px
+            font-size: 18px
+            line-height: 1.4
+        &__first-elipse
+            position: absolute
+            top: 140px
+            left: 110px
+            z-index: -1
+            display: none
+        &__figure
+            position: absolute
+            top: 249px
+            left: 15px
+            z-index: -1
+            display: none
+        &__second-elipse
+            display: none
+            position: absolute
+            bottom: -170px
+            left: -128px
+            transform: rotate(110deg)
+
+    .footer
+        &__container
+            position: relative
+            min-height: 272px
+            display: -webkit-box
+            display: -ms-flexbox
+            display: flex
+            -webkit-box-pack: end
+            -ms-flex-pack: end
+            justify-content: flex-end
+            -webkit-box-align: center
+            -ms-flex-align: center
+            align-items: center
+        &__img
+            position: absolute
+            left: -250px
+            bottom: 0px
+        &__title
+            margin: 0px 0px 20px 0px
+            font-size: 62px
+
+    .modal-content
+        background-color: #fefefe
+        margin: 18% auto
+        padding: 0px
+        border: 1px solid #888888
+        max-width: 35em
+        border-radius: 16px
+
+// Вертикальный планшет
+@media ( max-width: 991px )
+    .container 
+        width: 720px
+
+    .main-section
+        min-height: 545px
+        &__first-elipse
+            top: 115px
+            right: 15px
+
+    .left-wrapper
+        &__img
+            width: 530px
+            top: 34px
+        &__rectangle-blue
+            width: 390px
+            height: 125px
+        &__rectangle-orange
+            width: 410px
+            height: 125px
+        &__rectangle-grey
+            width: 400px
+            height: 120px
+
+    .right-wrapper
+        top: 74px
+        right: 0px
+        width: 325px
+        &__title
+            margin: 0px 0px 5px 0px
+        &__text
+            margin: 0px 0px 12px 0px
+            font-size: 13px
+
+    .title
+        font-size: 50px
+
+    .buttons
+        &__main-button
+            margin: 0px 15px 0px 0px
+            width: 155px
+            height: 50px
+            font-size: 14px
+        &__icon-button
+            img
+                margin: 0px 12px 0px 0px
+        &__text
+            font-size: 14px
+
+    .elipse
+        width: 180px
+        height: 180px
+        &_big
+            top: 475px
+            width: 220px
+            height: 220px
+        &__subtract
+            width: 120px
+            height: 120px
+            &_big
+                width: 170px
+                height: 170px
+
+    .cards-item
+        width: 220px
+        height: 220px
+        &__img
+            height: 190px
+        &__text
+            top: 85px
+            right: -75px
+            width: 280px
+            font-size: 26px
+
+    .icons-item
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-orient: horizontal
+        -webkit-box-direction: normal
+        -ms-flex-direction: row
+        flex-direction: row
+        -webkit-box-align: center
+        -ms-flex-align: center
+        align-items: center
+        &__img
+            margin: 0px 5px 0px 0px
+            width: 50px
+        &__text
+            font-size: 14px
+            span
+                font-size: 32px
+
+    .second-section
+        min-height: 460px
+        &__title
+            margin: 0px 0px 25px 0px
+        &__cards-box
+            margin: 0px 0px 20px 0px
+        &__first-elipse
+            top: -105px
+            right: -130px
+        &__second-elipse
+            top: 390px
+            left: -125px
+    
+    .third-section
+        min-height: 420px
+        &__container
+            padding: 25px 0px 0px 0px
+        &__certificate
+            display: none
+            position: absolute
+            top: 312px
+            left: 380px
+            width: 22em
+        &__right-wrapper
+            max-width: 720px
+        &__left-title
+            top: 40px
+            left: -10px
+        &__text
+            margin: 0px 0px 14px 0px
+            font-size: 15px
+            line-height: 1.4
+        &__first-elipse
+            width: 220px
+            height: 220px
+            top: 185px
+            left: 60px
+        &__figure
+            top: 250px
+            left: 0
+        &__second-elipse
+            top: 470px
+            left: 655px
+
+    .title
+        &__hr-top
+            bottom: 55px
+
+    .footer
+        &__img
+            left: -345px
+        &__title
+            left: 12px
+
+    .footer-wrapper
+        &__icons-box
+            padding: 0px 0px 0px 10px
+
+    .modal-content
+        background-color: #fefefe
+        margin: 18% auto
+        padding: 0px
+        border: 1px solid #888888
+        max-width: 34em
+        border-radius: 16px
+
+    .modal-header 
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        border-bottom: 1px solid #888888
+        padding: 16px 16px
+        font-size: 22px
+
+    .modal-body 
+        display: flex
+        flex-direction: column
+        border-bottom: 1px solid #888888
+        padding: 18px 16px
+
+    .modal-footer 
+        padding: 16px 16px
+        display: flex
+        flex-direction: row
+        justify-content: flex-end
+
+    .button-close
+        margin: 0px 16px 0px 0px
+        width: 96px
+        height: 38px
+        background: grey
+        border-radius: 12px
+        cursor: pointer
+        font-size: 14px
+        color: #FFFFFF
+
+    .button-send
+        width: 96px
+        height: 38px
+        background: dodgerblue
+        cursor: pointer
+        border-radius: 12px
+        font-size: 14px
+        color: #FFFFFF
+
+// Горизонтальный телефон
+@media ( max-width: 767px )
+    .container 
+        width: 540px
+
+    .nav-menu
+        position: fixed
+        top: 0px
+        right: -100%
+        height: 100vh
+        width: 50%
+        background: $color-blue
+        z-index: 15
+        -webkit-transition: 0.8s all
+        -o-transition: 0.8s all
+        transition: 0.8s all
+        &__list
+            height: 100%
+            -webkit-box-orient: vertical
+            -webkit-box-direction: normal
+            -ms-flex-direction: column
+            flex-direction: column
+            -webkit-box-pack: space-evenly
+            -ms-flex-pack: space-evenly
+            justify-content: space-evenly
+            -webkit-box-align: center
+            -ms-flex-align: center
+            align-items: center
+        &__list-item
+            margin: 0px 0px 0px 0px
+            font-size: 24px
+
+    .main-section
+        min-height: 465px
+        &__first-elipse
+            top: -70px
+            right: 74px
+        &__second-elipse
+            top: 405px
+            width: 225px
+            height: 225px
+        &__hamburger
+            position: absolute
+            top: 40px
+            right: 30px
+            width: 30px
+            height: 14px // 2 + 2 + 2 + 4 + 4 = 14 (height)
+            z-index: 30
+            span
+                display: block
+                height: 2px
+                width: 100%
+                background: black
+                -webkit-transition: 0.8s all
+                -o-transition: 0.8s all
+                transition: 0.8s all
+                margin: 0px 0px 4px 0px
+                &:last-child
+                    margin: 0px 0px 0px 0px
+    
+    .hamburger_active
+        span
+            margin: 0px 0px -2px 0px 
+            &:nth-child(1)
+                -webkit-transform: translateY(3px) rotate(-45deg)
+                -ms-transform: translateY(3px) rotate(-45deg)
+                transform: translateY(3px) rotate(-45deg)
+            &:nth-child(2)
+                display: none
+            &:nth-child(3)
+                -webkit-transform: translateY(3px) rotate(45deg)
+                -ms-transform: translateY(3px) rotate(45deg)
+                transform: translateY(3px) rotate(45deg)
+
+    .nav-menu_active
+        right: 0px
+                
+    .left-wrapper
+        &__img
+            position: absolute
+            top: 110px
+            left: 10px
+            width: 336px
+        &__rectangle-blue
+            width: 285px
+            height: 100px
+        &__rectangle-orange
+            width: 310px
+            height: 100px
+        &__rectangle-grey
+            width: 285px
+            height: 90px
+
+    .title
+        left: 0px
+        font-size: 32px
+        &__hr
+            width: 40px
+            left: 2px
+
+    .right-wrapper
+        width: 258px
+        top: 76px
+        left: 285px
+        &__text
+            font-size: 11px
+
+    .icons
+        &__item
+            width: 32px
+            height: 32px
+
+    .icons__item i 
+        font-size: 18px
+
+    .buttons
+        &__main-button
+            width: 130px
+            height: 40px
+            font-size: 11px
+        &__icon-button 
+            img
+                height: 42pxч
+                width: 38px
+        &__text
+            font-size: 12px
+        
+    .second-section
+        min-height: 395px
+        &__container
+            padding: 24px 0px 0px 0px
+        &__title
+            margin: 0px 0px 28px 0px
+        &__icons-box
+            -webkit-justify-content: space-around
+            justify-content: space-around
+        &__first-elipse
+            display: none
+        &__second-elipse
+            display: none
+
+    .cards-item 
+        width: 200px
+        height: 200px
+        &__img
+            height: 160px
+        &__text
+            top: 85px
+            right: -95px
+            width: 280px
+            font-size: 22px
+
+    .second-section .icons-item
+        &__img
+            height: 42px
+            width: 42px
+            margin: 0px 8px 0px 0px
+        &__text
+            font-size: 12px
+            span
+                font-size: 24px
+
+    .third-section
+        min-height: 440px
+        &__left-title
+            display: none
+        &__right-wrapper 
+            position: absolute
+            top: 30px
+            left: 25px
+        &__text
+            margin: 0px 0px 20px 0px
+        &__first-elipse
+            top: 125px
+            left: 305px
+            width: 230px
+            height: 230px
+        &__figure
+            top: 220px
+            left: 260px
+        
+    .title__hr-top 
+        bottom: 35px
+
+    .elipse
+        &__subtract_big 
+            width: 160px
+            height: 160px
+        
+    .footer
+        &__img
+            left: -375px
+
+    // Стилизация модального окна и прочих его компонентов
+    .modal
+        display: none
+        position: fixed
+        z-index: 999
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 100%
+        overflow: auto
+        background-color: rgb(0, 0, 0)
+        background-color: rgba(0, 0, 0, 0.4)
+
+    .modal-content
+        background-color: #fefefe
+        margin: 28% auto
+        padding: 0px
+        border: 1px solid #888888
+        max-width: 28em
+        border-radius: 16px
+
+    .modal-header
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        border-bottom: 1px solid #888888
+        padding: 12px
+        font-size: 20px
+
+    .modal-title
+        font-size: 16px
+
+    .closeButton
+        cursor: pointer 
+
+    .modal-body
+        display: flex
+        flex-direction: column
+        border-bottom: 1px solid #888888
+        padding: 12px 10px
+
+    .input-email
+        padding: 0px 0px 6px 0px
+
+    .email
+        font-size: 12px
+        border: 1px solid grey
+        padding: 2px
+        margin: 0px 0px 6px 0px
+        width: 180px
+
+    .input-age
+        padding: 0px 0px 6px 0px
+
+    .age
+        font-size: 12px
+        border: 1px solid grey
+        padding: 2px
+        width: 180px
+
+    .modal-footer
+        padding: 12px
+        display: flex
+        flex-direction: row
+        justify-content: flex-end
+
+    .button-close
+        margin: 0px 16px 0px 0px
+        width: 86px
+        height: 32px
+        background: grey
+        border-radius: 12px
+        cursor: pointer
+        font-size: 12px
+        color: #FFFFFF
+
+    .button-send
+        width: 86px
+        height: 32px
+        background: dodgerblue
+        cursor: pointer
+        border-radius: 12px
+        font-size: 12px
+        color: #FFFFFF
+
+// Вертикальный телефон
+@media ( max-width: 575px )
+    .container 
+        padding: 0px 10px
+        width: 320px // либо 100%
+    
+    .left-wrapper
+        &__img
+            display: none
+        &__rectangle-blue
+            display: none
+        &__rectangle-orange
+            display: none
+        &__rectangle-grey
+            display: none
+    
+    .right-wrapper
+        left: 34px
+
+    .icons__item 
+        width: 30px
+        height: 30px
+
+    .buttons
+        &__main-button 
+            width: 122px
+            height: 38px
+            font-size: 10px
+        &__icon-button img 
+            height: 42px
+            width: 38px
+
+    .main-section
+        min-height: 400px
+        &__first-elipse
+            top: 0px
+            width: 110px
+            height: 110px
+        &__second-elipse
+            display: none
+
+    .elipse
+        &__subtract
+            width: 75px
+            height: 75px
+
+    .second-section
+        min-height: 800px
+        &__container
+            padding: 16px 0px 0px 0px
+        &__title 
+            padding: 0px 10px
+            margin: 0px 0px 22px 0px
+        &__cards-box
+            display: -webkit-box
+            display: -ms-flexbox
+            display: flex
+            -webkit-box-orient: vertical
+            -webkit-box-direction: normal
+            -ms-flex-direction: column
+            flex-direction: column
+            -webkit-box-align: center
+            -ms-flex-align: center
+            align-items: center
+        &__cards-item
+            margin: 0px 0px 8px 0px
+        .icons-item
+            display: -webkit-box
+            display: -ms-flexbox
+            display: flex
+            -webkit-box-orient: vertical
+            -webkit-box-direction: normal
+            -ms-flex-direction: column
+            flex-direction: column
+            -webkit-box-align: center
+            -ms-flex-align: center
+            align-items: center
+            &__img
+                height: 38px
+                width: 38px
+                margin: 0px 0px 4px 0px
+            &__text
+                font-size: 8px
+                span
+                    font-size: 18px
+
+    .cards-item
+        &__text 
+            right: -85px
+
+    .third-section
+        min-height: 414px
+        &__right-title 
+            margin: 0px 0px 14px 0px
+        &__text
+            margin: 0px 0px 14px 0px
+            width: 275px
+            font-size: 11px
+        &__first-elipse
+            display: none
+        &__second-elipse
+            display: none
+        &__figure
+            display: none
+        
+    .footer
+        &__img
+            left: -325px
+        &__wrapper
+            display: none
+
+    // Стилизация модального окна и прочих его компонентов
+    .modal
+        display: none
+        position: fixed
+        z-index: 999
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 100%
+        overflow: auto
+        background-color: rgb(0, 0, 0)
+        background-color: rgba(0, 0, 0, 0.4)
+
+    .modal-content
+        background-color: #fefefe
+        margin: 28% auto
+        padding: 0px
+        border: 1px solid #888888
+        max-width: 22em
+        border-radius: 16px
+
+    .modal-header
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        border-bottom: 1px solid #888888
+        padding: 12px 12px 8px 12px
+        font-size: 20px
+
+    i
+        font-size: 14px
+
+    .modal-title
+        font-size: 16px
+
+    .closeButton
+        cursor: pointer 
+
+    .modal-body
+        display: flex
+        flex-direction: column
+        border-bottom: 1px solid #888888
+        padding: 12px 10px
+
+    .input-email
+        padding: 0px 0px 6px 0px
+        margin: 0px
+        font-size: 12px
+
+    .email
+        border: 1px solid grey
+        padding: 4px
+        margin: 0px 0px 6px 0px
+        width: 200px
+
+    .input-age
+        padding: 0px 0px 6px 0px
+        margin: 0px
+        font-size: 12px
+
+    .age
+        border: 1px solid grey
+        padding: 4px
+        width: 200px
+
+    .modal-footer
+        padding: 12px
+        display: flex
+        flex-direction: row
+        justify-content: flex-end
+
+    .button-close
+        margin: 0px 16px 0px 0px
+        width: 80px
+        height: 30px
+        background: grey
+        border-radius: 12px
+        cursor: pointer
+        font-size: 10px
+        color: #FFFFFF
+
+    .button-send
+        width: 80px
+        height: 30px
+        background: dodgerblue
+        cursor: pointer
+        border-radius: 12px
+        font-size: 10px
+        color: #FFFFFF
